@@ -1,15 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Sidebar from "./Components/Sidebar";
+import Feed from "./Components/Feed";
+import Widgets from "./Components/Widgets";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       {/* Sidebar */}
       <Sidebar />
-      {/* Scrollable Component */}
-
+      {/* Scrollable Feed */}
+      <Feed />
       {/* Right Side */}
+      <Widgets />
     </div>
   );
 }
