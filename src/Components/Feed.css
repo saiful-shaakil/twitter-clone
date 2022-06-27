@@ -17,7 +17,7 @@
   background-color: white;
   z-index: 100;
   border: 1px solid var(--twitter-background);
-  padding: 15px 20px;
+  padding: 0 20px;
 }
 .feed-header > h3 {
   font-size: 20px;

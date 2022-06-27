@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Sidebar from "./Components/Sidebar";
 import Feed from "./Components/Feed";
