@@ -19,6 +19,9 @@
   font-size: 20px;
   border: none;
 }
+.tweetbox-input > input:focus {
+  outline: none;
+}
 .tweetBox .tweet-button {
   background-color: var(--twitter-color) !important;
   border: none !important;
