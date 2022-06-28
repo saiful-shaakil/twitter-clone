@@ -18,12 +18,6 @@ const Widgets = () => {
         <h2>What's happening?</h2>
 
         <TwitterTweetEmbed tweetId={"1507447494799724565"} />
-
-        <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="elonmask"
-          options={{ height: 400 }}
-        />
       </div>
     </div>
   );

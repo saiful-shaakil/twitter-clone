@@ -1,17 +1,15 @@
 import "./App.css";
-import Sidebar from "./Components/Sidebar";
-import Feed from "./Components/Feed";
-import Widgets from "./Components/Widgets";
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./Components/MainPage/MainPage";
+import LoginPage from "./Components/LoginPage";
 
 function App() {
   return (
-    <div className="app">
-      {/* Sidebar */}
-      <Sidebar />
-      {/* Scrollable Feed */}
-      <Feed />
-      {/* Right Side */}
-      <Widgets />
+    <div>
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+      </Routes>
     </div>
   );
 }

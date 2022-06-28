@@ -1,0 +1,77 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+.bg-image {
+  background-image: url(.././images/twitter-logo-graphic.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0.5;
+}
+.login {
+  flex: 0.5;
+  padding: 50px 40px;
+}
+.login > .login-data > h2 {
+  font-size: 60px;
+}
+.login > .login-data > h4 {
+  font-size: 30px;
+}
+.login > .login-data > .login-by > .google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login > .login-data > .login-by > .google-button:hover {
+  background-color: var(--twitter-background);
+}
+.login > .login-data > .login-by > .google-button > .google-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+}
+.twiiter-icon {
+  color: var(--twitter-color) !important;
+  font-size: 50px !important;
+}
+.email-button {
+  padding: 13px;
+  margin-top: 20px;
+  width: 220px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: white;
+  font-weight: 600;
+  background-color: #3ca5e7;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.have-account > h5 {
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.sign-in {
+  padding: 13px;
+  margin-top: 20px;
+  width: 220px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: white;
+  font-weight: 600;
+  color: #3aa9ef;
+  cursor: pointer;
+}
+.sign-in:hover {
+  background-color: var(--twitter-background);
+}

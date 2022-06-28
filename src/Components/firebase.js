@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyDZbvg-xhx3zmXZOMk--jZOzRPJNhrdEA8",
   authDomain: "twitt-bf2b4.firebaseapp.com",
@@ -13,6 +14,7 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 const colRef = collection(db, "tweets");
+const auth = getAuth(app);
 
 export { colRef };
-export default db;
+export default auth;
