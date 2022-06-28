@@ -13,11 +13,7 @@
 .post-avatar {
   padding: 20px 5px;
 }
-.post-footer {
-  display: flex;
-  margin-top: 10px;
-  justify-content: space-between;
-}
+
 .post-badge {
   font-size: 14px !important;
   color: var(--twitter-color);
@@ -36,4 +32,12 @@
 .post-header-discription {
   margin-bottom: 10px;
   font-size: 15px;
+}
+.post-footer {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.post-footer > .MuiSvgIcon-root {
+  cursor: pointer !important;
 }
