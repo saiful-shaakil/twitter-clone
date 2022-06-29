@@ -9,7 +9,7 @@ import { Avatar } from "@mui/material";
 import React, { forwardRef } from "react";
 import "./Post.css";
 
-const Post = forwardRef(
+export const Post = forwardRef(
   ({ displayName, userName, text, image, verified, avatar }, ref) => {
     return (
       <div className="post" ref={ref}>
@@ -43,5 +43,3 @@ const Post = forwardRef(
     );
   }
 );
-
-export default Post;

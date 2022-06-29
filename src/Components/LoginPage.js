@@ -1,8 +1,15 @@
 import { Twitter } from "@mui/icons-material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import auth from "./firebase";
 import "./LoginPage.css";
-
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  if (user) {
+    navigate("/");
+  }
   return (
     <div className="login-page">
       {/* image */}
@@ -15,6 +22,7 @@ const LoginPage = () => {
           <h4>Join Twitter today.</h4>
           <div className="login-by">
             <button
+              onClick={() => signInWithGoogle()}
               aria-label="Login with Google"
               type="button"
               className="google-button"

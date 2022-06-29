@@ -31,5 +31,20 @@
   height: 50px !important;
   margin-top: 20px !important;
   width: 140px !important;
-  margin-left: auto !important;
+}
+.icons-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons-section > .icons > .MuiSvgIcon-root {
+  color: var(--twitter-color) !important;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 80px;
+  margin-top: 17px;
 }

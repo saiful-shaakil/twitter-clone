@@ -2,9 +2,9 @@ import { getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import "./Feed.css";
 import { colRef } from "./firebase";
-import Post from "./Post";
 import TweetBox from "./TweetBox";
 import FlipMove from "react-flip-move";
+import { Post } from "./Post";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
