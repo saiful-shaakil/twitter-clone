@@ -18,37 +18,25 @@ import "./TweeBox.css";
 const TweetBox = () => {
   const [tweetMessage, setTweetMessage] = useState("");
   const [user, loading] = useAuthState(auth);
-  const imgbbKey = "a6f2cc718c0eea45cff3de7842947fd3";
 
   const upload = () => {
     document.getElementById("selectImage").click();
   };
   const postTweet = (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    const url = `https://api.imgbb.com/1/upload?key=${imgbbKey}`;
-    const image = e.target.form.selectImage.files[0];
-    formData.append("image", image);
-    fetch(url, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const imageLink = data?.data?.url;
-        addDoc(colRef, {
-          displayName: user?.displayName,
-          userName: `${user?.displayName
-            ?.replace(/\s/g, "")
-            .toLowerCase()
-            .slice(0, 6)}`,
-          verified: true,
-          avatar: user?.photoURL,
-          text: tweetMessage,
-          image: imageLink,
-        });
-        setTweetMessage("");
-      });
+    addDoc(colRef, {
+      displayName: user?.displayName,
+      userName: `${user?.displayName
+        ?.replace(/\s/g, "")
+        .toLowerCase()
+        .slice(0, 6)}`,
+      verified: true,
+      avatar: user?.photoURL,
+      text: tweetMessage,
+      image:
+        "https://media4.giphy.com/media/MNa0HKdhc3SGQ/giphy.gif?cid=ecf05e47fkxziivb60gsjxkt3eu21kp8oepajuchkljg4qlv&rid=giphy.gif&ct=g",
+    });
+    setTweetMessage("");
   };
   return (
     <div className="tweetBox">
